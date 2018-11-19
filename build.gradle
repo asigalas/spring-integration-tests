@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.0.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+	id 'java'
+	id 'eclipse'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-integration')
+	implementation('org.springframework.integration:spring-integration-http')
+	implementation('com.fasterxml.jackson.core:jackson-databind:2.9.7')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('org.springframework.integration:spring-integration-test-support')
+	testImplementation('log4j:log4j:1.2.17')
+}
+
+wrapper.gradleVersion = '4.10.2'
+wrapper.distributionSha256Sum = 'b49c6da1b2cb67a0caf6c7480630b51c70a11ca2016ff2f555eaeda863143a29'
